@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AutoFurnish</string>
+    <string name="retry"><b><i>Retry</i></b></string>
+</resources>

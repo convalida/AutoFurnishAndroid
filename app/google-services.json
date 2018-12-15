@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "200560883722",
+    "project_id": "autofurnish-195809"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200560883722:android:cd1165d5c0081a15",
+        "android_client_info": {
+          "package_name": "com.convalida.android.autofurnish"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200560883722-tc3cpl44jg283ccrrm2r374onsii208t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.convalida.android.autofurnish",
+            "certificate_hash": "91e026efa7b121358b6309cc02ba32d3e7377a0d"
+          }
+        },
+        {
+          "client_id": "200560883722-o8jd70chhbell6mvn68b130pnmq180in.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAy55HKliQOMcZzkgRrtlaANn76DJ19-0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
