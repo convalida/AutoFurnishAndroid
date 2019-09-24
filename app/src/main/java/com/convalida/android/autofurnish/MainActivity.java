@@ -38,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
     private static final int MAIN_REQUEST_CODE = 1;
     WebView webview;
     ImageView splash;
+    boolean firstLoad=false;
     private static final String TAG="MainActivity";
-    String url="http://www.autofurnish.com";
-  //  String url="http://demo.autofurnish.com";
+ //   String url="http://www.autofurnish.com";
+    String url="https://autofurnish.com";
     String ua="Mozilla/5.0 (Linux; Android 4.1.1; HTC One X Build/JRO03C) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.58 Mobile Safari/537.31";
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -48,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        Uri data = intent.getData();
         webview =  findViewById(R.id.web);
         splash= findViewById(R.id.welcomeImg);
 
@@ -186,9 +190,12 @@ public class MainActivity extends AppCompatActivity {
                     super.onPageStarted(view, url, favicon);
 
                      Log.e(TAG,"Current url: onPageStarted "+currentUrl);
-                     if(currentUrl.equals("http://www.autofurnish.com/")){
-                         webview.setVisibility(View.INVISIBLE);
-                         splash.setVisibility(View.VISIBLE);
+                     if(!firstLoad) {
+                         if (currentUrl.equals("https://autofurnish.com/")) {
+                             webview.setVisibility(View.INVISIBLE);
+                             splash.setVisibility(View.VISIBLE);
+                             firstLoad=true;
+                         }
                      }
 
                     if(currentUrl.equals("https://www.facebook.com/autofurnish/")|| currentUrl.contains("twitter")||currentUrl.equals("https://plus.google.com/+Autofurnish")||currentUrl.contains("youtube")||currentUrl.contains("instagram")
